@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en"> 
+    <head>
+		<title>Sign In</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+
+	
+<body class="is-preload"> 
+        <!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Broussards Creole Foods</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="cajun_hickory_bacon_flavor.html">Cajun Hickory Bacon</a></li>
+                        <li><a href="spicy_cajun_creole.html">Spicy Cajun Creole</a></li>
+                        <li><a href="lemon_pepper.html">Lemon Pepper</a></li>
+                        <li><a href="sign_in.html" class="active">Sign In</a></li>
+                        <li><a href="sign_up.html">Sign Up</a></li>
+					</ul>
+				</nav>
+            </header>
+
+<!-- Form -->
+    <section> 
+        <h2>Sign In</h2>
+        <form method="post" action="#"> 
+            <div class="row gtr-uniform">
+                <div class="email">
+                    <p>Email</p>
+                    <input type="email" id="email"  size="16" maxlength="30" 
+                    onFocus="this.style.backgroundColor = 'green';" 
+                    onBlur="this.style.backgroundColor='black';" 
+                    placeholder="Email"/>
+                </div>
+                <div class="password">
+                    <p>Password</p>
+                    <input type="password" id="password" size="16" maxlength="30" 
+                    onFocus="this.style.backgroundColor = 'green';" 
+                    onBlur="this.style.backgroundColor='black';" 
+                    placeholder="Password"/>
+                    <input type="checkbox" name="showpassword" id="show" value="show"><label for="show">Show Password</label>
+                    <input type="checkbox" name="rememberpassword" id="remember" value="remember"><label for="remember">Remember Password</label>
+                    <input type="button" value="Sign In" onClick="submitAlert();">    
+                    <p>New to Broussards Creole Foods?<span><a href="sign_up.html"> Create an account here</a></span></p>
+                    <p><a href="index.html">Back to home</a></p>     
+                </div>
+                <script>
+                    function submitAlert() {
+                        alert("Sign In Approved");
+                    }
+                    
+                    function checkUsername(username) {
+                        var val = document.getElementById("username").value;
+                        if (val === "") {
+                           
+                            alert("Username required.");
+                              
+                        }
+                      }    
+                      
+                      function checkPassword(password) {
+                          var pword = document.getElementById("password").value;
+                          if (pword === "") {
+                             
+                              alert("Password required.");
+                        }
+                      }    
+                    </script>
+                    <style>
+                        h1.title {
+                            text-align: center; 
+                            font-family: Arial, Helevitica, sans-serif;
+                            margin-left: 1em;
+                    }
+                        p {
+                            font-family: Arial, Helevitica, sans-serif;
+                    }
+                        input[type=text], input[type=password] {
+                            width: 50%;
+                            padding: 15px;
+                            margin: 5px 0px 22px 0;
+                            display: inline-block;
+                            border: none;
+                            background: #ddd;
+                    }
+                        form {
+                            margin: 2em 0 0 2em;
+                            text-align: center;
+                            font-size: 1.1em;
+                    }
+                        a {
+                             text-decoration: none;
+                    }
+                        a:active {
+                             color: purple;
+                    }
+                        .text {
+                            font-family: Arial, Helevitica, sans-serif;
+                            text-align: left;
+                            font-size: 1.2em;
+                            display: inline;    
+                            color: black;
+                    }
+        </style>
+        </form>
+    </section>     
+  </body>
+</html>
+		
+
+
+        

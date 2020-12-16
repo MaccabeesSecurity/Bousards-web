@@ -51,12 +51,16 @@
                     onFocus="this.style.backgroundColor = 'green';" 
                     onBlur="this.style.backgroundColor='black';" 
                     placeholder="Password"/>
-                    <input type="checkbox" name="showpassword" id="show" value="show"><label for="show">Show Password</label>
-                    <input type="checkbox" name="rememberpassword" id="remember" value="remember"><label for="remember">Remember Password</label>
-                    <input type="button" value="Sign Up" onClick="submitAlert();"> 
+                    <input type="checkbox" name="showpassword" id="show" value="show">
+                    <label for="show">Show Password</label>
+                    <input type="checkbox" name="rememberpassword" id="remember" value="remember">
+                    <label for="remember">Remember Password</label> 
                     <p>Have an account?<span><a href="sign_in.html"> Sign in here</a></span></p>
-                   <p><a href="index.html">Back to home</a></p>
-                   <script>
+                    <input type="button" value="Sign Up" onClick="submitAlert();">
+                    <p><a href="index.html">Back to home</a></p>
+                   
+                  
+                  <script>
                     function submitAlert() {
                         alert("Account created. Welcome to Broussards Creole Foods.");
                     }
@@ -83,6 +87,10 @@
                             text-align: center; 
                             font-family: Arial, Helevitica, sans-serif;
                             margin-left: 1em;
+                    }
+
+                        #show {
+                            text-align: center;
                     }
                         p {
                             text-align:center;

@@ -37,30 +37,34 @@
         <form onSubmit="checkUsername('username');" onSubmit="checkPassword('password');"> 
             <div class="row gtr-uniform">
                 
-                <div class="email">
+                <section class="">
+                    <div class="email">
                     <p>Email</p>
                     <input type="email" id="email" size ="16" maxlength="30" 
                     onFocus="this.style.backgroundColor = 'green';" 
                     onBlur="this.style.backgroundColor='black';" 
                     placeholder="Email"/>
-                </div>
+                    </div>
+                </section>
                 
-                <div class="password">
-                    <p>Password</p>
-                    <input type="password" id="password" size="25" maxlength="30" 
-                    onFocus="this.style.backgroundColor = 'green';" 
-                    onBlur="this.style.backgroundColor='black';" 
-                    placeholder="Password"/>
-                    <br>
-                    <input type="checkbox" name="showpassword" id="show" value="show">
-                    <label for="show">Show Password</label>
-                    <input type="checkbox" name="rememberpassword" id="remember" value="remember">
-                    <label for="remember">Remember Password</label> 
-                    <p>Have an account?<span><a href="sign_in.html"> Sign in here</a></span></p>
-                    <input type="button" value="Sign Up" onClick="submitAlert();">
-                    <br>
-                    <p><a href="index.html">Back to home</a></p>
-                   
+                <section class="">
+                    <div class="password">
+                        <p>Password</p>
+                        <input type="password" id="password" size="25" maxlength="30" 
+                        onFocus="this.style.backgroundColor = 'green';" 
+                        onBlur="this.style.backgroundColor='black';" 
+                        placeholder="Password"/>
+                        <br>
+                        <input type="checkbox" name="showpassword" id="show" value="show">
+                        <label for="show">Show Password</label>
+                        <input type="checkbox" name="rememberpassword" id="remember" value="remember">
+                        <label for="remember">Remember Password</label> 
+                        <p>Have an account?<span><a href="sign_in.html"> Sign in here</a></span></p>
+                        <input type="button" value="Sign Up" onClick="submitAlert();">
+                        <p><a href="index.html">Back to home</a></p>
+                     </div>  
+                </section>
+               
                   
                   <script>
                     function submitAlert() {
@@ -85,14 +89,21 @@
                     </script>
                    
                    <style>
-                        h2 {
+                       h2 {
                             text-align: center; 
                             font-family: Arial, Helevitica, sans-serif;
                             margin-left: 1em;
-                    }
+                        }
 
-                        #show {
-                            text-align: center;
+                        .email {
+                            text-align: center; 
+                            font-family: Arial, Helevitica, sans-serif;
+                            margin-left: 5em;
+                    }      
+                         .password {
+                            text-align: center; 
+                            font-family: Arial, Helevitica, sans-serif;
+                            margin-left: 10em;
                     }
                         p {
                             text-align:center;
@@ -115,13 +126,6 @@
                     }
                         a:active {
                              color: purple;
-                    }
-                        .text {
-                            font-family: Arial, Helevitica, sans-serif;
-                            text-align: left;
-                            font-size: 1.2em;
-                            display: inline;    
-                            color: black;
                     }
         </style>
         </form> 

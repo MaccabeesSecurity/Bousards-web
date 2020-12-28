@@ -37,23 +37,17 @@
         <form method="post" action="#"> 
             <div class="row gtr-uniform">
                  <section class="">
-                    <div class="email">
-                        <p>Email</p>
-                        <input type="email" id="email" size="16" maxlength="30" 
-                        onFocus="this.style.backgroundColor = 'green';" 
-                        onBlur="this.style.backgroundColor='black';" 
-                        placeholder="Email"/>
+                    <div id="email">
+                        <p class="emailName">Email</p>
+                        <input type="email" id="email" size="25" maxlength="30"/>
                     </div>
                 </section>
              </div>
 
                 <section class="">
-                    <div class="password">
-                        <p>Password</p>
-                        <input type="password" id="password" size="16" maxlength="30" 
-                        onFocus="this.style.backgroundColor = 'green';" 
-                        onBlur="this.style.backgroundColor='black';" 
-                        placeholder="Password"/>
+                    <div id="password">
+                        <p class="passName">Password</p>
+                        <input type="password" id="password" size="20" maxlength="30"/>
                         <br>
                         <input type="checkbox" name="showpassword" id="show" value="show">
                         <label for="show">Show Password</label>
@@ -71,11 +65,11 @@
                         alert("Sign In Approved");
                     }
                     
-                    function checkUsername(username) {
-                        var val = document.getElementById("username").value;
+                    function checkEmail(email) {
+                        var val = document.getElementById("email").value;
                         if (val === "") {
                            
-                            alert("Username required.");
+                            alert("Email required.");
                               
                         }
                       }    
@@ -94,18 +88,35 @@
                             text-align: center; 
                             font-family: Arial, Helevitica, sans-serif;
                             margin-left: 2em;
+                    }
+                        .emailName {
+                            text-align: center;
+                            font-family: Arial, Helvetica, sans-serif;
+                            margin-left: 14em;
+                        }
+                       
+                        #email { 
+                            text-align: center;
+                            font-family: Arial, Helevitica, sans-serif;
+                            margin-left: 15em;
+                    }
+                        .passName {
+                            text-align: center;
+                            font-family: Arial, Helevitica, sans-serif;
+                            margin-right: 1em;
                         }
 
-                        .email, .password {
+                        #password {
                             text-align: center; 
                             font-family: Arial, Helevitica, sans-serif;
-                            margin-left: 5em;
+                            margin-left: 0em;
                     }
                         p {
-                            text-align:center;
+                            text-align: center;
                             font-family: Arial, Helevitica, sans-serif;
+
                     }
-                        input[type=text], input[type=password] {
+                        input[type=email], input[type=password] {
                             width: 50%;
                             padding: 15px;
                             margin: 5px 0px 22px 0;
@@ -114,21 +125,7 @@
                     }
                         form {
                             margin: 5em 0 0 5em;
-                            text-align: center;
                             font-size: 1.1em;
-                    }
-                        a {
-                             text-decoration: none;
-                    }
-                        a:active {
-                             color: purple;
-                    }
-                        .text {
-                            font-family: Arial, Helevitica, sans-serif;
-                            text-align: left;
-                            font-size: 1.2em;
-                            display: inline;    
-                            color: black;
                     }
         </style>
         </form>

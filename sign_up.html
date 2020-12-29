@@ -60,26 +60,27 @@
                 </section>
                
                   
-                  <script>
+                <script>
                     function submitAlert() {
-                        alert("Account created. Welcome to Broussards Creole Foods.");
+                        alert("Sign In Approved");
                     }
-                        
-                    function checkUsername(username) {
-                        var val = document.getElementById("username").value;
-                        if (val === "")
-                            {
-                                alert("Username required.");
-                            }
-                    }    
                     
-                    function checkPassword(password) {
-                        var pword = document.getElementById("password").value;
-                        if (pword === "")
-                          {
-                            alert("Password required.");
-                          }
-                    }    
+                    function checkEmail(email) {
+                        var val = document.getElementById("email").value;
+                        if (val === "") {
+                           
+                            alert("Email required.");
+                              
+                        }
+                      }    
+                      
+                      function checkPassword(password) {
+                          var pword = document.getElementById("password").value;
+                          if (pword === "") {
+                             
+                              alert("Password required.");
+                        }
+                      }    
                     </script>
                    
                    <style>
@@ -94,7 +95,7 @@
                             font-family: Arial, Helevitica, sans-serif;
                             margin-left: 5em;
                     }      
-                    
+
                         p {
                             text-align:center;
                             font-family: Arial, Helevitica, sans-serif;

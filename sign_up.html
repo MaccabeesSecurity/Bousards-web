@@ -34,27 +34,26 @@
 <!-- Form -->
     <section> 
         <h2>Create an account</h2>
-        <form onSubmit="checkUsername('username');" onSubmit="checkPassword('password');"> 
+        <form onSubmit="checkEmail('email');" onSubmit="checkPassword('password');"> 
             <div class="row gtr-uniform">
-                
-                <section class="">
-                    <div class="email">
-                    <p>Email</p>
-                    <input type="email" id="email" size ="25" maxlength="30"/>
+                    <div id="email">
+                        <p class="emailName">Email</p>
+                    <input type="email" id="email" size ="25" maxlength="50"/>
                     </div>
                 </section>
+            </div>
                 
                 <section class="">
-                    <div class="password">
-                        <p>Password</p>
-                        <input type="password" id="password" size="15" maxlength="30"/>
+                    <div id ="password">
+                        <p class="passName">Password</p>
+                        <input type="password" id="password" size="25" maxlength="50"/>
                         <br>
                         <input type="checkbox" name="showpassword" id="show" value="show">
                         <label for="show">Show Password</label>
                         <input type="checkbox" name="rememberpassword" id="remember" value="remember">
                         <label for="remember">Remember Password</label> 
                         <p>Have an account?<span><a href="sign_in.html"> Sign in here</a></span></p>
-                        <input type="button" value="Sign Up" onClick="submitAlert();">
+                        <input type="button" value="Sign Up" onClick="submitAlert();" onClick="checkEmail(email);" onClick="checkPassword(password);">
                         <p><a href="index.html">Back to home</a></p>
                      </div>  
                 </section>
@@ -87,21 +86,45 @@
                        h2 {
                             text-align: center; 
                             font-family: Arial, Helevitica, sans-serif;
-                            margin-left: 1em;
+                            margin-left: 2em;
+                    }
+                        .emailName {
+                            text-align: center;
+                            font-family: Arial, Helvetica, sans-serif;
+                            margin-left: 20em;
+                        }
+                       
+                        #email { 
+                            text-align: center;
+                            font-family: Arial, Helevitica, sans-serif;
+                            margin-left: 12em;
+                    }
+                        .passName {
+                            text-align: center;
+                            font-family: Arial, Helevitica, sans-serif;
+                            margin-right: 1em;
                         }
 
-                        .email,  .password {
+                        #password {
                             text-align: center; 
                             font-family: Arial, Helevitica, sans-serif;
-                            margin-left: 5em;
-                    }      
-
-                        p {
-                            text-align:center;
-                            font-family: Arial, Helevitica, sans-serif;
+                            margin-left: 2em;
                     }
-                        input[type=text], input[type=password] {
-                            width: 50%;
+                        p {
+                            text-align: center;
+                            font-family: Arial, Helevitica, sans-serif;
+
+                    }
+                        input[type=email] {
+                            width: 100%;
+                            padding: 15px;
+                            margin: 5px 0px 22px 0;
+                            display: inline-block;
+                            border: none;
+                    }
+
+                        input[type=password] {
+                            width: 35%;
                             padding: 15px;
                             margin: 5px 0px 22px 0;
                             display: inline-block;
@@ -109,16 +132,9 @@
                     }
                         form {
                             margin: 5em 0 0 5em;
-                            text-align: center;
                             font-size: 1.1em;
                     }
-                        a {
-                             text-decoration: none;
-                    }
-                        a:active {
-                             color: purple;
-                    }
-        </style>
+            </style>
         </form> 
     </section>     
   </body>
